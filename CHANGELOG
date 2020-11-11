@@ -1,3 +1,5 @@
+- Added support for Fulfillment.update_tracking
+
 == Version 8.0.4
 - Release API version 2020-10
 - Deprecate API version 2019-10
