@@ -28,6 +28,8 @@ pip install --upgrade ShopifyAPI
 1. We then need to supply these keys to the Shopify Session Class so that it knows how to authenticate.
 
    ```python
+   import shopify
+   
    shopify.Session.setup(api_key=API_KEY, secret=API_SECRET)
    ```
 1.  In order to access a shop's data, apps need an access token from that specific shop. We need to authenticate with that shop using OAuth, which we can start in the following way:
@@ -45,6 +47,8 @@ pip install --upgrade ShopifyAPI
     ```
 
 1. Once the merchant accepts, the shop redirects the owner to the `redirect_uri` of your application with a parameter named 'code'. This is a temporary token that the app can exchange for a permanent access token. You should compare the state you provided above with the one you recieved back to ensure the request is correct. Now we can exchange the code for an access_token when you get the request from shopify in your callback handler:
+
+(request_params does not exist. PLEASE FIX!)
 
     ```python
     session = shopify.Session(shop_url, api_version)
